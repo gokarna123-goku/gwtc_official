@@ -1,0 +1,611 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<div class="container-fluid px-0 mx-0 main_section">
+    <!--=================================== Navbar and Landing Page Section ===================================-->
+    <div class="container-fluid px-0 mx-0 header_landing_page_section">
+        <!--=================================== Navbar Section ===================================-->
+        <div class="container-fluid header-section py-3 navbar_top">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container col-lg-11 pe-0">
+                    <a href="{% url 'home' %}" class="text-decoration-none">
+                        <img class="logo" src="{% static 'images/gwtc.jpg' %}" alt="GWTC Logo">
+                    </a>
+                    <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item me-3">
+                                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" href="#">Portfolio</a>
+                            </li>
+                            <li class="nav-item me-0">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--=================================== Landing Page Section ===================================-->
+        <div class="container col-lg-11 py-5">
+            <div class="text-start my-5 py-4">
+                <h4 class="primary letter-spacing text-xl playfair">We Turn Idea</h4>
+                <h1 class="text-xl pt-2 stroke-text">Into Reality, That's Awesome!</h1>
+            </div>
+        </div>
+    </div>
+    <!--=================================== About US Section ===================================-->
+    <div class="container col-lg-11 my-5">
+        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-5 pb-4">About Us</p>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="p-2">
+                    <p class="secondary text-s lh-s"> Welcome to Global We Tech Care, GWTC</p>
+                    <h3 class="primary lh-s playfair fw-bold text-xl lh mb-4">Creative Solutions by Professional
+                        Designers
+                    </h3>
+                    <p class="tertiary mt-4 me-5 pe-4 mb-1">
+                        Based upon our research, the cost of developing high performing web platforms has been one of
+                        the barriers of entry for most small and medium enterprises in Nepal. The cost of developing web
+                        platforms and the ongoing management costs associated with<span id="dots">...</span>
+                        <span id="more">
+                            such platforms. We provide ecommerce platform with features to list products for sale on the
+                            world wide web (www), manage available
+                            inventory, make sales using popular e-pay apps, process orders received in from the web and
+                            also manage delivery of the received orders.
+                        </span>
+                    </p>
+                    <span class="secondary d-flex" onclick="myFunction()" id="myBtn" style="cursor: pointer;">Read
+                        more</span>
+
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4 mt-5">
+                <div class="py-2 pe-0 about_box">
+                    <div class="back_box">
+                        <div class="overlap_box p-2">
+                            <p class="text-end primary playfair h6 text-uppercase me-3">
+                                Since <span class="primary h6 text-uppercase">1980</span>
+                            </p>
+                            <div class="mx-3 mt-5 text-start">
+                                <div class="d-flex align-items-start mb-2">
+                                    <h1 class="text-l fw900 stroke-text">25</h1>
+                                    <i class="fa fa-plus text-xl stroke-text pt-3 ms-3"></i>
+                                </div>
+                                <h5 class="primary text-uppercase">years of experience</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr">
+    <!--=================================== Services Section ===================================-->
+    <div class="container col-lg-11 my-5">
+        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Services</p>
+        <!-- What we do -->
+        <p class="text-center tertiary mb-5 text-sm">The following services will be accessiable to our clients from our
+            company.
+        </p>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
+                <div class="py-2 service_box text-start px-4">
+                    <div class="icon_box mt-5 pt-3 text-center mb-4">
+                        <i class="fa fa-desktop fs-1 pb-3 secondary"></i>
+                    </div>
+                    <div class="content pb-4">
+                        <h5 class="primary">Web Development</h5>
+                        <p class="tertiary my-4 text-start">
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                        </p>
+                        <a href="#" class="text-decoration-none secondary text-start">Read More...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
+                <div class="py-2 service_box text-start px-4">
+                    <div class="icon_box mt-5 pt-3 mb-4">
+                        <i class="fa fa-mobile fs-1 pb-3 secondary"></i>
+                    </div>
+                    <div class="content pb-4">
+                        <h5 class="primary">App Development</h5>
+                        <p class="tertiary my-4">
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                        </p>
+                        <a href="#" class="text-decoration-none secondary">Read More...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
+                <div class="py-2 service_box text-start px-4">
+                    <div class="icon_box mt-5 pt-3 mb-4">
+                        <i class="fa fa-desktop fs-1 pb-3 secondary"></i>
+                    </div>
+                    <div class="content pb-4">
+                        <h5 class="primary">Cloud Computing</h5>
+                        <p class="tertiary my-4">
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                        </p>
+                        <a href="#" class="text-decoration-none secondary mb-0">Read More...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12 mb-4">
+                <div class="py-2 service_box text-start px-4">
+                    <div class="icon_box mt-5 pt-3 mb-4">
+                        <i class="fa fa-desktop fs-1 pb-3 secondary"></i>
+                    </div>
+                    <div class="content pb-4">
+                        <h5 class="primary">Web Development</h5>
+                        <p class="tertiary my-4">
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                            we design based upon your requirements.
+                        </p>
+                        <a href="#" class="text-decoration-none secondary">Read More...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr">
+    <!--=================================== Collaboration Page Section ===================================-->
+    <div class="container-fluid px-0 mx-0 process">
+        <div class="container col-lg-11 my-5">
+            <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Collaboration</p>
+            <p class="text-center tertiary mb-5 text-sm">Organizations we've worked with</p>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="p-2 shadow-sm bg-dark">
+                        <p class="secondary text-center mb-0">Google</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="p-2 shadow-sm bg-dark">
+                        <p class="secondary text-center mb-0">Google</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="p-2 shadow-sm bg-dark">
+                        <p class="secondary text-center mb-0">Google</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="p-2 shadow-sm bg-dark">
+                        <p class="secondary text-center mb-0">Google</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="p-2 shadow-sm bg-dark">
+                        <p class="secondary text-center mb-0">Google</p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="p-2 shadow-sm bg-dark">
+                        <p class="secondary text-center mb-0">Google</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr">
+    <!--=================================== Portfolio Page Section ===================================-->
+    <div class="container col-lg-11 my-5 portfolio">
+        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Works</p>
+        <p class="text-center tertiary mb-5 text-sm">Organizations we've worked with</p>
+        <!-- tabls section -->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-web-development-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-web-development" type="button" role="tab"
+                    aria-controls="pills-web-development" aria-selected="true">
+                    Web Development
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-app-development-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-app-development" type="button" role="tab"
+                    aria-controls="pills-app-development" aria-selected="false">
+                    App Development
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cloud-computing-tab" data-bs-toggle="pill"
+                    data-bs-target="#pills-cloud-computing" type="button" role="tab"
+                    aria-controls="pills-cloud-computing" aria-selected="false">
+                    Cloud Computing
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled"
+                    type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>
+                    Logo Design
+                </button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-web-development" role="tabpanel"
+                aria-labelledby="pills-web-development-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="p-0">
+                            <div class="project_box">
+                                <img src="{% static 'images/it.png' %}" alt="" class="project img-fluid">
+                                <div class="project_detail ps-4 pe-3 py-2">
+                                    <h5 class="primary">Goku Store</h5>
+                                    <p class="tertiary">
+                                        This is all about ecommerce website. This is all about ecommerce website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="p-0">
+                            <div class="project_box">
+                                <img src="{% static 'images/it1.jpg' %}" alt="" class="project img-fluid">
+                                <div class="project_detail ps-4 pe-3 py-2">
+                                    <h5 class="primary">Goku Store</h5>
+                                    <p class="tertiary">
+                                        This is all about ecommerce website. This is all about ecommerce website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="p-0">
+                            <div class="project_box">
+                                <img src="{% static 'images/x1.jpg' %}" alt="" class="project img-fluid">
+                                <div class="project_detail ps-4 pe-3 py-2">
+                                    <h5 class="primary">Goku Store</h5>
+                                    <p class="tertiary">
+                                        This is all about ecommerce website. This is all about ecommerce website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="p-0">
+                            <div class="project_box">
+                                <img src="{% static 'images/about.jpg' %}" alt="" class="project img-fluid">
+                                <div class="project_detail ps-4 pe-3 py-2">
+                                    <h5 class="primary">Goku Store</h5>
+                                    <p class="tertiary">
+                                        This is all about ecommerce website. This is all about ecommerce website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-app-development" role="tabpanel"
+                aria-labelledby="pills-app-development-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="p-0">
+                            <div class="project_box">
+                                <img src="{% static 'images/collaboration.jpg' %}" alt="" class="project img-fluid">
+                                <div class="project_detail ps-4 pe-3 py-2">
+                                    <h5 class="primary">Goku Store</h5>
+                                    <p class="tertiary">
+                                        This is all about ecommerce website. This is all about ecommerce website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="p-0">
+                            <div class="project_box">
+                                <img src="{% static 'images/about1.jpg' %}" alt="" class="project img-fluid">
+                                <div class="project_detail ps-4 pe-3 py-2">
+                                    <h5 class="primary">Goku Store</h5>
+                                    <p class="tertiary">
+                                        This is all about ecommerce website. This is all about ecommerce website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-cloud-computing" role="tabpanel"
+                aria-labelledby="pills-cloud-computing-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="p-0">
+                            <div class="project_box">
+                                <img src="{% static 'images/about.jpg' %}" alt="" class="project img-fluid">
+                                <div class="project_detail ps-4 pe-3 py-2">
+                                    <h5 class="primary">Goku Store</h5>
+                                    <p class="tertiary">
+                                        This is all about ecommerce website. This is all about ecommerce website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="p-0">
+                            <div class="project_box">
+                                <img src="{% static 'images/it.png' %}" alt="" class="project img-fluid">
+                                <div class="project_detail ps-4 pe-3 py-2">
+                                    <h5 class="primary">Goku Store</h5>
+                                    <p class="tertiary">
+                                        This is all about ecommerce website. This is all about ecommerce website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tabs end here -->
+    </div>
+    <hr class="hr">
+    <!--=================================== Our Expertise Page Section ===================================-->
+    <div class="container col-lg-11 my-5">
+        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our expertise</p>
+        <p class="text-center tertiary mb-5 text-sm">The following tools and technologies has used to develop any
+            projects.</p>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="p-2"><img src="{% static 'images/django.png' %}" alt="" class="expertise"></div>
+            </div>
+            <div class="col-lg-3">
+                <div class="p-2"><img src="{% static 'images/mysql.png' %}" alt="" class="expertise"></div>
+            </div>
+            <div class="col-lg-3">
+                <div class="p-2"><img src="{% static 'images/figma.png' %}" alt="" class="expertise"></div>
+            </div>
+            <div class="col-lg-3">
+                <div class="p-2"><img src="{% static 'images/canva.png' %}" alt="" class="expertise"></div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr">
+    <!--=================================== Our Team Page Section ===================================-->
+    <div class="container col-lg-10 my-5">
+        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Team</p>
+        <p class="text-center tertiary mb-5 text-sm">Organizations we've worked with</p>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="p-0 member_box">
+                    <div class="member_social_id mb-2">
+                        <img src="{% static 'images/me.png' %}" alt="" class="team_member">
+                        <div class="social_link px-2 py-1">
+                            <a href="#" class="text-decoration-none me-3">
+                                <i class="fa fa-linkedin primary"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none me-3">
+                                <i class="fa fa-github primary"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="info px-2 pb-2">
+                        <h6 class="primary mb-1">Gokarna Adhikari</h6>
+                        <p class="tertiary text-small mb-1">Django Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hr">
+    <!--=================================== Contact US Page Section ===================================-->
+    <div class="container col-lg-10 py-5">
+        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Connect with us</p>
+        <p class="text-center tertiary mb-5 text-sm">Get in touch and discover how we can help. We aim to be in touch
+            for a
+            consultation</p>
+        <div class="row">
+            <div class="col-lg-7 d-lg-block d-none">
+                <div class="p-0">
+                    <img src="{% static 'images/x1.jpg' %}" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="px-3 py-3 contact">
+                    <form class="my-3">
+                        <div class="mb-4">
+                            <label for="fullname" class="primary mb-1">Full Name</label>
+                            <input type="text" id="fullname" class="form-control border" placeholder="fullname">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="primary mb-1">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="email address">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="primary mb-1">Message</label>
+                            <textarea name="" id="message" rows="4" class="form-control border"
+                                placeholder="Type your message..."></textarea>
+                        </div>
+                        <button class="btn submit_btn mt-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=================================== Footer Section ===================================-->
+    <footer class="container-fluid px-0 mx-0 pt-5 pb-3">
+        <div class="container col-lg-11 py-5 footer">
+            <div class="row mt-3 mb-5">
+                <div class="col-lg-4">
+                    <div class="p-2">
+                        <h5 class="primary mb-4">GWTC</h5>
+                        <p class="tertiary mb-4">
+                            Aut fuga error aut unde et distinctio sit ratione libero nemo ullam deserunt sequi ut
+                            voluptatum ut earum suscipit et voluptatem maxime fuga necessitatibus maiores nesciunt et.
+                        </p>
+                        <div class="company_social_link">
+                            <a href="#" class="text-decoration-none link me-3">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none link me-3">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none link me-3">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none link me-3">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none link me-3">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-decoration-none link me-3">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="py-2 px-3">
+                        <h5 class="primary mb-4">Quick Link</h5>
+                        <div class="quick_links">
+                            <a href="#" class="link mb-2 text-decoration-none">
+                                <i class="fa fa-long-arrow-right text-s me-2 "></i>
+                                <p class=" mb-0">Home</p>
+                            </a>
+                            <a href="#" class="link mb-2 text-decoration-none">
+                                <i class="fa fa-long-arrow-right text-s me-2 "></i>
+                                <p class=" mb-0">About Us</p>
+                            </a>
+                            <a href="#" class="link mb-2 text-decoration-none">
+                                <i class="fa fa-long-arrow-right text-s me-2 "></i>
+                                <p class=" mb-0">Services</p>
+                            </a>
+                            <a href="#" class="link mb-2 text-decoration-none">
+                                <i class="fa fa-long-arrow-right text-s me-2 "></i>
+                                <p class=" mb-0">Portfolio</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="p-2">
+                        <h5 class="primary mb-4">Our Services</h5>
+                        <div class="quick_links">
+                            <a href="#" class="link mb-2 text-decoration-none">
+                                <i class="fa fa-long-arrow-right text-s me-2 "></i>
+                                <p class=" mb-0">Web Development</p>
+                            </a>
+                            <a href="#" class="link mb-2 text-decoration-none">
+                                <i class="fa fa-long-arrow-right text-s me-2 "></i>
+                                <p class=" mb-0">App Development</p>
+                            </a>
+                            <a href="#" class="link mb-2 text-decoration-none">
+                                <i class="fa fa-long-arrow-right text-s me-2 "></i>
+                                <p class=" mb-0">Digital Marketing</p>
+                            </a>
+                            <a href="#" class="link mb-2 text-decoration-none">
+                                <i class="fa fa-long-arrow-right text-s me-2 "></i>
+                                <p class=" mb-0">Logo Development</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="p-2">
+                        <h5 class="primary mb-4">Contact US</h5>
+                        <div class="contact_box">
+                            <div class="d-flex align-items-start mb-3">
+                                <i class="fa fa-home text-s me-2 secondary mb-0"></i>
+                                <p class="tertiary mb-0">Chunikhel Tupek, Kapan Budhanilkantha-14, Kathmandu</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa fa-envelope-open me-2 secondary mb-0"></i>
+                                <p class="tertiary mb-0">gwtc.online@gmail.com</p>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa fa-phone me-2 text-s secondary mb-0"></i>
+                                <p class="tertiary mb-0">+977-9898989898</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr">
+            <div class="d-flex justify-content-center align-items-center">
+                <p class="tertiary">
+                    &copy; 2023 - <a href="#" class="text-decoration-none secondary">GWTC</a> all rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--=================================== Ended Section ===================================-->
+</div>
+
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
+<script>
+    function scrollNavbar() {
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    document.getElementById('navbar_top').classList.add('fixed-top');
+                    // add padding top to show content behind navbar
+                    // navbar_height = document.querySelector('.nav_section').offsetHeight;
+                    document.body.style.backgroundColor = '#212121';
+                } else {
+                    document.getElementById('navbar_top').classList.remove('fixed-top');
+                    // remove padding top from body
+                    document.body.style.backgroundColor = 'none';
+                }
+            });
+        });
+    }
+</script>
+{% endblock content %}
