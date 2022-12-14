@@ -94,7 +94,9 @@
             </div>
         </div>
     </div>
-    <hr class="hr">
+    <div class="container col-lg-11">
+        <hr class="hr">
+    </div>
     <!--=================================== Services Section ===================================-->
     <div class="container col-lg-11 my-5">
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Services</p>
@@ -177,7 +179,9 @@
             </div>
         </div>
     </div>
-    <hr class="hr">
+    <div class="container col-lg-11">
+        <hr class="hr">
+    </div>
     <!--=================================== Collaboration Page Section ===================================-->
     <div class="container-fluid px-0 mx-0 process">
         <div class="container col-lg-11 my-5">
@@ -217,7 +221,9 @@
             </div>
         </div>
     </div>
-    <hr class="hr">
+    <div class="container col-lg-11">
+        <hr class="hr">
+    </div>
     <!--=================================== Portfolio Page Section ===================================-->
     <div class="container col-lg-11 my-5 portfolio">
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Works</p>
@@ -380,7 +386,9 @@
         </div>
         <!-- tabs end here -->
     </div>
-    <hr class="hr">
+    <div class="container col-lg-11">
+        <hr class="hr">
+    </div>
     <!--=================================== Our Expertise Page Section ===================================-->
     <div class="container col-lg-11 my-5">
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our expertise</p>
@@ -401,12 +409,24 @@
             </div>
         </div>
     </div>
-    <hr class="hr">
+    <div class="container col-lg-11">
+        <hr class="hr">
+    </div>
     <!--=================================== Our Team Page Section ===================================-->
     <div class="container col-lg-10 my-5">
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Team</p>
         <p class="text-center tertiary mb-5 text-sm">Organizations we've worked with</p>
-        <div class="row">
+        <div class="our_team_box">
+            <div class="team_content_box">
+                <div class="img_box">
+                    <img src="{% static 'images/me.png' %}" alt="Team Member" class="member_img">
+                    <div class="member_info">
+                        <h5 class="primary">Gokarna Adhikari</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
             <div class="col-lg-2">
                 <div class="p-0 member_box">
                     <div class="member_social_id mb-2">
@@ -426,15 +446,25 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
-    <hr class="hr">
+    <div class="container col-lg-11">
+        <hr class="hr">
+    </div>
     <!--=================================== Contact US Page Section ===================================-->
-    <div class="container col-lg-10 py-5">
+    <div class="container col-lg-10 py-5" id="contact">
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Connect with us</p>
-        <p class="text-center tertiary mb-5 text-sm">Get in touch and discover how we can help. We aim to be in touch
-            for a
-            consultation</p>
+        <p class="text-center tertiary mb-5 text-sm">
+            Get in touch and discover how we can help. We aim to be in touch for a consultation
+        </p>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
         <div class="row">
             <div class="col-lg-7 d-lg-block d-none">
                 <div class="p-0">
@@ -443,21 +473,24 @@
             </div>
             <div class="col-lg-5">
                 <div class="px-3 py-3 contact">
-                    <form class="my-3">
+                    <form class="my-3" method="POST" action="/">
+                        {% csrf_token %}
                         <div class="mb-4">
                             <label for="fullname" class="primary mb-1">Full Name</label>
-                            <input type="text" id="fullname" class="form-control border" placeholder="fullname">
+                            <input type="text" name="fullname" id="fullname" class="form-control border"
+                                placeholder="fullname">
                         </div>
                         <div class="mb-4">
                             <label for="email" class="primary mb-1">Email Address</label>
-                            <input type="email" id="email" class="form-control" placeholder="email address">
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="email address">
                         </div>
                         <div class="mb-4">
                             <label for="message" class="primary mb-1">Message</label>
-                            <textarea name="" id="message" rows="4" class="form-control border"
+                            <textarea name="message" id="message" rows="4" class="form-control border"
                                 placeholder="Type your message..."></textarea>
                         </div>
-                        <button class="btn submit_btn mt-2">Submit</button>
+                        <button type="submit" hx-target='#contact' class="btn submit_btn mt-2">Submit</button>
                     </form>
                 </div>
             </div>
@@ -591,21 +624,8 @@
     }
 </script>
 <script>
-    function scrollNavbar() {
-        document.addEventListener("DOMContentLoaded", function () {
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 50) {
-                    document.getElementById('navbar_top').classList.add('fixed-top');
-                    // add padding top to show content behind navbar
-                    // navbar_height = document.querySelector('.nav_section').offsetHeight;
-                    document.body.style.backgroundColor = '#212121';
-                } else {
-                    document.getElementById('navbar_top').classList.remove('fixed-top');
-                    // remove padding top from body
-                    document.body.style.backgroundColor = 'none';
-                }
-            });
-        });
-    }
+    document.body.addEventListener('htmx:configRequest', (event) => {
+        event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}'; //insert csrf token when performing AJAX request 
+    })
 </script>
 {% endblock content %}
