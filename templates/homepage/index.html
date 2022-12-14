@@ -412,6 +412,45 @@
     <div class="container col-lg-11">
         <hr class="hr">
     </div>
+    <!--=================================== CEO Message Section ===================================-->
+    <div class="container col-lg-11 my-5">
+        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-5">CEO Message</p>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="px-2 py-3">
+                    <h4 class="primary text-xl playfair mb-3">What Our CEO Say, About GWTC Customers</h4>
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-quote-left secondary me-1" style="font-size: 0.8333rem;"></i>
+                        <h4 class="primary mb-3">
+                            We help our clients to renew their business function to create brandable organizations
+                            <i class="fa fa-quote-right secondary" style="font-size: 0.8333rem;"></i>
+                        </h4>
+                    </div>
+                    <p class="tertiary mb-4">
+                        Appropriately enhance principle-centered innovation rather than high standards in platforms.
+                        Credibly orchestrate functional markets through multidisplinary services. Uniquely strategize
+                        transparent technology and user friendly ideas markets.
+                    </p>
+                    <div class="col-lg-3 d-flex align-items-center mb-0 pb-0">
+                        <hr class="container col-lg-1 secondary rounded-pill pt-1">
+                        <h5 class="secondary mb-1">Bikesh Sapkota</h5>
+                    </div>
+                    <p class="tertiary ms-2">Ceo & Founder</p>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-4">
+                <div class="p-2">
+                    <div class="ceo_message_box">
+                        <img src="{% static 'images/mee.png' %}" alt="" class="ceo_img img-thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container col-lg-11">
+        <hr class="hr">
+    </div>
     <!--=================================== Our Team Page Section ===================================-->
     <div class="container col-lg-10 my-5">
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Team</p>
@@ -498,12 +537,12 @@
             Get in touch and discover how we can help. We aim to be in touch for a consultation
         </p>
         {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{message}}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            {% endfor %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
         {% endif %}
         <div class="row">
             <div class="col-lg-7 d-lg-block d-none">

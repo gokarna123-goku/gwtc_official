@@ -235,26 +235,27 @@ ul{
 .project_box{
     position: relative;
     cursor: pointer;
-    transition: 0.5s ease-out;
+    transition: 1s ease-in-out;
 }
 .project_box .project{
     width: 100%;
     height: 50vh;
     object-fit: cover;
     object-position: center;
-    transition: 0.5s ease-out;
 }
 .project_box .project_detail{
     position: absolute;
     bottom: 0;
     background: var(--card-bg);
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.200) 80%, rgba(0, 0, 0, 0.1990) 75%); */
-    display: none;
-    transition: 0.5s ease-out;
+    /* display: none; */
+    opacity: 0;
+    transition: 1s ease-in-out;
 }
 .project_box:hover .project_detail{
     display: block;
-    transition: 0.5s ease-out;
+    opacity: 1;
+    transition: 1s ease-in-out;
 }
 .expertise{
     width: auto;
@@ -282,6 +283,22 @@ ul{
     background: var(--secondary);
     color: var(--bg);
     border: 2px solid var(--secondary);
+}
+
+/*  */
+.ceo_message_box .ceo_img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    /* border-radius: 50% 3% 47% 5%; */
+    border: 1px solid var(--card-bg);
+    padding: 0.3rem;
+    background: url('/static/images/about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    object-position: center;
 }
 
 /*  */
