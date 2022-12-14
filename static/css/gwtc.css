@@ -12,7 +12,7 @@
     --footer-bg : #151515;
     --transparent : transparent;
     --primary : #e3e1e1;
-    --secondary : #f0bc5e;
+    --secondary : #32acd5;
     --tertiary: #6c757d;
     --linear-gradient-img: linear-gradient(to right, rgba(0, 0, 0, 0.65) 80%, rgba(0, 0, 0, 0.65) 75% );
     --linear-gradient-card: linear-gradient(to right, rgba(0, 0, 0, 0.75) 85%, rgba(0, 0, 0, 0.75) 80% );
@@ -287,19 +287,24 @@ ul{
 /*  */
 .our_team_box{
     width: 100%;
-    /* background: var(--card-bg); */
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .team_content_box{
-    width: 340px;
+    width: 350px;
     height: auto;
+    margin: 0.5rem 1rem;
 }
 .img_box{
     position: relative;
+    transition: opacity 1s ease-in-out;
 }
 .img_box .member_img{
     width: 100%;
-    height: 55vh;
+    height: 60vh;
     object-fit: cover;
     object-position: center;
 }
@@ -309,10 +314,47 @@ ul{
     left: 5%;
     right: 5%;
     width: 300px;
-    height: 10vh;
+    height: 12vh;
     background: var(--primary);
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.img_box .team_social_link{
+    position: absolute;
+    top: 25%;
+    right: 0;
+    background: var(--card-bg);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.img_box:hover .team_social_link{
+    opacity: 1;
+}
+.img_box .team_social_link a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--primary);
+    color: var(--footer-bg);
+    border: 2px solid var(--card-bg);
+    transition: 0.5s ease-in-out;
+}
+.img_box .team_social_link a:hover{
+    background: var(--transparent);
+    color: var(--primary);
+    border: 2px solid var(--primary);
 }
 
 /*  */
