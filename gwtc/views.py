@@ -15,3 +15,7 @@ class Index(generic.CreateView):
             messages.success(request, "Your Form has been submitted successfully!")
             return redirect('home')
         return render(request, self.template_name, {'form':form})
+
+
+class Portfolio(generic.TemplateView):
+    template_name = 'portfolio/portfolio.html'
