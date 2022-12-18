@@ -29,46 +29,37 @@
 .btn{
     border-radius: 0px;
 }
-
 .btn:focus, .btn:active:focus, .btn.active:focus{
     outline:none;
     box-shadow:none;
 }
-
 .form-control:focus, .form-control:active:focus, .form-control.active:focus{
     outline: none;
     box-shadow: none;
 }
-
 .form-select:focus, .form-select:active:focus, .form-select.active:focus{
     outline: none;
     box-shadow: none;
 }
-
 .form-check-input[type=checkbox]{
     border-radius: 0px !important;
 }
-
 .form-check-input:focus, .form-check-input:active:focus, .form-check-input.active:focus{
     outline: none;
     box-shadow: none;
 }
-
 .form-control{
     border-radius: 0px;
     border: none;
 }
-
 .form-select{
     border-radius: 0px;
 }
-
 .img-thumbnail{
     padding: 0.5px;
     border-radius: 0px;
     background-color: #707070;
 }
-
 hr{
     opacity: 1;
 }
@@ -135,6 +126,19 @@ ul{
 }
 .hr{
     background: var(--card-bg);
+}
+.load_more_button{
+    background: var(--secondary);
+    color: var(--footer-bg);
+    border: 2px solid var(--secondary);
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    transition: 0.8s ease-out;
+}
+.load_more_button:hover{
+    background: var(--transparent);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
 }
 .main_section{
     width: 100%;
