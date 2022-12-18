@@ -8,15 +8,13 @@ def get_file_path(request, filename):
     filename = "%s%s" % (nowTime, original_filename)
     return os.path.join('portfolio/', filename)
 
-<<<<<<< HEAD
-=======
+
 class PortfolioCategory(models.Model):
     category_name = models.CharField(max_length=20)
     
     def __str__(self):
         return self.category_name
 
->>>>>>> 172336bec30a9843852a218f7ee4799733201efd
 class Portfolio(models.Model):
     portfolio = models.CharField(max_length=50)
     description = models.CharField(max_length=100)
