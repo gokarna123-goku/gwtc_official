@@ -8,7 +8,6 @@ def get_file_path(request, filename):
     filename = "%s%s" % (nowTime, original_filename)
     return os.path.join('portfolio/', filename)
 
-
 class Portfolio(models.Model):
     portfolio = models.CharField(max_length=50)
     description = models.CharField(max_length=100)

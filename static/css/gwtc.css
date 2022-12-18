@@ -277,6 +277,7 @@ ul{
     background: var(--secondary);
 }
 .project_box{
+    width: 100%;
     position: relative;
     cursor: pointer;
     transition: 1s ease-out;
@@ -288,6 +289,7 @@ ul{
     object-position: center;
 }
 .project_box .project_detail{
+    width: 100%;
     position: absolute;
     bottom: 0;
     background: var(--card-bg);
