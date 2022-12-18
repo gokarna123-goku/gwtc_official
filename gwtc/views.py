@@ -17,5 +17,5 @@ class Index(generic.CreateView):
         return render(request, self.template_name, {'form':form})
 
 
-class Portfolio(generic.TemplateView):
+class PortfolioView(generic.TemplateView):
     template_name = 'portfolio/portfolio.html'
