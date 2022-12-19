@@ -220,58 +220,21 @@
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Works</p>
         <p class="text-center tertiary mb-5 text-sm">Organizations we've worked with</p>
         <div class="row mb-4">
-            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                <div class="p-0">
-                    <div class="project_box">
-                        <img src="{% static 'images/it.png' %}" alt="" class="project img-fluid">
-                        <div class="project_detail ps-4 pe-3 py-2">
-                            <h5 class="primary">Goku Store</h5>
-                            <p class="tertiary text-small">
-                                This is all about ecommerce website. This is all about ecommerce website.
-                            </p>
+            {% for work in portfolio %}
+                <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+                    <div class="p-0">
+                        <div class="project_box">
+                            <img src="{{ work.image.url }}" alt="" class="project img-fluid">
+                            <div class="project_detail ps-4 pe-3 py-2">
+                                <h5 class="primary">{{ work.portfolio }}</h5>
+                                <p class="tertiary text-small">
+                                    {{ work.description }}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                <div class="p-0">
-                    <div class="project_box">
-                        <img src="{% static 'images/about.jpg' %}" alt="" class="project img-fluid">
-                        <div class="project_detail ps-4 pe-3 py-2">
-                            <h5 class="primary">Goku Store</h5>
-                            <p class="tertiary text-small">
-                                This is all about ecommerce website. This is all about ecommerce website.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                <div class="p-0">
-                    <div class="project_box">
-                        <img src="{% static 'images/about1.jpg' %}" alt="" class="project img-fluid">
-                        <div class="project_detail ps-4 pe-3 py-2">
-                            <h5 class="primary">Goku Store</h5>
-                            <p class="tertiary text-small">
-                                This is all about ecommerce website. This is all about ecommerce website.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                <div class="p-0">
-                    <div class="project_box">
-                        <img src="{% static 'images/x1.jpg' %}" alt="" class="project img-fluid">
-                        <div class="project_detail ps-4 pe-3 py-2">
-                            <h5 class="primary">Goku Store</h5>
-                            <p class="tertiary text-small">
-                                This is all about ecommerce website. This is all about ecommerce website.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="d-flex justify-content-center align-items-center">
             <a href="{% url 'portfolio' %}" class="btn text-decoration-none view-button px-4">View All</a>

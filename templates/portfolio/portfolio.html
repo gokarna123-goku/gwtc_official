@@ -50,10 +50,17 @@
             <div class="col-lg-3 col-md-4 mb-4">
                 <div class="p-0 portfolio_category_nav">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active mb-2 me-0" id="v-pills-home-tab" data-bs-toggle="pill"
+                        <!-- {% for port_cat in portfolio_category %}
+                            <button class="nav-link me-0" id="v-pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                                aria-selected="true">
+                                {{ port_cat.category_name }}
+                            </button>
+                        {% endfor %} -->
+                        <button class="nav-link me-0" id="v-pills-home-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
                             aria-selected="true">
-                            All Portfolio
+                            All Work
                         </button>
                         <button class="nav-link mb-2" id="v-pills-profile-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
