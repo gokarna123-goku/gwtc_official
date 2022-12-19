@@ -277,6 +277,7 @@ ul{
     background: var(--secondary);
 }
 .project_box{
+    width: 100%;
     position: relative;
     cursor: pointer;
     transition: 1s ease-out;
@@ -288,6 +289,7 @@ ul{
     object-position: center;
 }
 .project_box .project_detail{
+    width: 100%;
     position: absolute;
     bottom: 0;
     background: var(--card-bg);
@@ -371,7 +373,7 @@ ul{
     width: 100%;
     height: 60vh;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
 }
 .img_box .member_info{
     position: absolute;
@@ -505,25 +507,45 @@ ul{
     color: var(--secondary);
 }
 
-
-/* .process{
-    background: var(--linear-gradient-img), url('/static/images/collaboration.jpg');
-    background-position: center center;
-    background-size: cover;
-} */
-/* .process{
-    position: relative;
-    width: 100%;
+@media (max-width: 1024px) {
+    .text-xl {
+        font-size: 2.5rem;
+    }
+    .lh {
+        line-height: 3.2302rem;
+    }
 }
-.process::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/static/images/dots.png');
-    background-repeat: repeat;
-    opacity: .1;
-    z-index: -1;
-} */
+
+@media (max-width: 768px) {
+    .text-xl {
+        font-size: 2.5rem;
+    }
+    .lh {
+        line-height: 3.2302rem;
+    }
+    .about_box{
+        width: 100%;
+    }
+    .about_box .back_box {
+        width: 90%;
+        height: 370px;
+        margin-left: 0rem;
+    }
+    .about_box .overlap_box {
+        position: absolute;
+        right: -60px;
+        top: -60px;
+        width: 90%;
+        height: 370px;
+    }
+    .text-xl {
+        font-size: 1.75rem;
+    }
+    .h4, h4 {
+        font-size: calc(1.075rem);
+    }
+    .ceo_message_box .ceo_img {
+        width: 300px;
+        height: 300px;
+    }
+}
