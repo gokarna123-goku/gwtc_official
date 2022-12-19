@@ -51,7 +51,7 @@
     <div class="container col-lg-11 my-5">
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-5 pb-4">About Us</p>
         <div class="row">
-            <div class="col-xl-8 col-lg-7 col-md-12 mb-xl-0 mb-lg-0 mb-md-4">
+            <div class="col-xl-8 col-lg-7 col-md-12 mb-4">
                 <div class="p-2">
                     <p class="secondary text-s lh-s mb-xl-4 mb-lg-0"> Welcome to Global We Tech Care, GWTC</p>
                     <h3 class="primary lh-s playfair fw-bold text-xl lh mb-xl-4 mb-lg-3">Creative Solutions by Professional
@@ -72,8 +72,7 @@
                         more</span>
                 </div>
             </div>
-            <!-- <div class="col-xl-1 col-lg-0"></div> -->
-            <div class="col-xl-4 col-lg-5 col-md-12 mt-xl-0 mt-lg-0 mt-md-5 text-center">
+            <div class="col-xl-4 col-lg-5 col-md-12 mt-5 text-center">
                 <div class="py-2 pe-0 about_box">
                     <div class="back_box">
                         <div class="overlap_box p-xl-2 p-lg-2 px-md-5 py-md-2">
@@ -174,7 +173,7 @@
         <hr class="hr">
     </div>
     <!--=================================== Collaboration Page Section ===================================-->
-    <div class="container-fluid px-0 mx-0 process">
+    <!-- <div class="container-fluid px-0 mx-0 process">
         <div class="container col-lg-11 my-5">
             <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Collaboration</p>
             <p class="text-center tertiary mb-5 text-sm">Organizations we've worked with</p>
@@ -214,7 +213,7 @@
     </div>
     <div class="container col-lg-11">
         <hr class="hr">
-    </div>
+    </div> -->
     <!--=================================== Portfolio Page Section ===================================-->
     <div class="container col-lg-11 my-5 portfolio">
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our Works</p>
@@ -249,16 +248,16 @@
         <p class="text-center tertiary mb-5 text-sm">The following tools and technologies has used to develop any
             projects.</p>
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/django.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/mysql.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/figma.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-6 mb-lg-0 mb-md-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/canva.png' %}" alt="" class="expertise"></div>
             </div>
         </div>
@@ -317,7 +316,7 @@
                     <img src="{% static 'images/goku.png' %}" alt="Team Member" class="member_img">
                     <div class="member_info text-center py-2">
                         <h5 class="secondary mt-1 text-s">Gokarna Adhikari</h5>
-                        <p class="tertiary text-small mb-0">Django Developer</p>
+                        <p class="tertiary text-small mb-0">Frontend Developer</p>
                     </div>
                     <div class="team_social_link p-2 text-center">
                         <a href="#" class="text-decoration-none mb-2">
@@ -470,17 +469,17 @@
                         <div class="mb-4">
                             <label for="fullname" class="primary mb-1">Full Name</label>
                             <input type="text" name="fullname" id="fullname" class="form-control border"
-                                placeholder="fullname">
+                                placeholder="fullname" required>
                         </div>
                         <div class="mb-4">
                             <label for="email" class="primary mb-1">Email Address</label>
                             <input type="email" name="email" id="email" class="form-control"
-                                placeholder="email address">
+                                placeholder="email address" required>
                         </div>
                         <div class="mb-4">
                             <label for="message" class="primary mb-1">Message</label>
                             <textarea name="message" id="message" rows="4" class="form-control border"
-                                placeholder="Type your message..."></textarea>
+                                placeholder="Type your message..." required></textarea>
                         </div>
                         <button type="submit" hx-target='#contact' class="btn submit_btn mt-2">Submit</button>
                     </form>

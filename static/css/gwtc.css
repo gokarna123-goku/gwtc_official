@@ -525,18 +525,12 @@ ul{
     }
     .about_box{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .about_box .back_box {
-        width: 90%;
-        height: 370px;
         margin-left: 0rem;
-    }
-    .about_box .overlap_box {
-        position: absolute;
-        right: -60px;
-        top: -60px;
-        width: 90%;
-        height: 370px;
     }
     .text-xl {
         font-size: 1.75rem;
@@ -544,8 +538,9 @@ ul{
     .h4, h4 {
         font-size: calc(1.075rem);
     }
-    .ceo_message_box .ceo_img {
-        width: 300px;
-        height: 300px;
+    .ceo_message_box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
