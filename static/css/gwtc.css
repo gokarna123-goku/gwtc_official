@@ -336,6 +336,10 @@ ul{
 
 
 /*  */
+.ceo_message_box{
+    position: relative;
+    transition: opacity 1s ease-in-out;
+}
 .ceo_message_box .ceo_img{
     width: 400px;
     height: 400px;
@@ -349,6 +353,42 @@ ul{
     background-position: center center; */
     object-fit: cover;
     object-position: top;
+}
+.ceo_message_box .ceo_social_link{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    left: 32%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.ceo_message_box .ceo_social_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ceo_message_box:hover .ceo_social_link{
+    opacity: 1;
+}
+.ceo_message_box .ceo_social_link a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--primary);
+    color: var(--footer-bg);
+    border: 2px solid var(--card-bg);
+    transition: 0.5s ease-in-out;
+}
+.ceo_message_box .ceo_social_link a:hover{
+    background: var(--card-bg) !important;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
 }
 
 /*  */
@@ -574,6 +614,10 @@ ul{
         width: 270px;
         height: 12vh;
     }
+    .ceo_message_box .ceo_social_link{
+        bottom: 20px;
+        left: 28%;
+    }
 }
 @media (max-width: 330px) {
     .about_box .back_box {
@@ -593,4 +637,8 @@ ul{
         width: 230px;
         height: 12vh;
     }
+    /* .ceo_message_box .ceo_social_link{
+        bottom: 20px;
+        left: 28%;
+    } */
 }
