@@ -2,9 +2,12 @@
 {% load static %}
 {% block title %}Home{% endblock title %}
 {% block content %}
-<div class="container-fluid px-0 mx-0 main_section">
+<div class="container-fluid px-0 mx-0">
     <!--=================================== Navbar and Landing Page Section ===================================-->
     <div class="container-fluid px-0 mx-0 header_landing_page_section">
+        <video autoplay muted loop>
+            <source src="{% static 'video/office.mp4' %}" type="video/mp4">
+        </video>
         <!--=================================== Navbar Section ===================================-->
         <div class="container-fluid header-section py-3 navbar_top">
             <nav class="navbar navbar-expand-lg">
@@ -12,7 +15,7 @@
                     <a href="{% url 'home' %}" class="text-decoration-none">
                         <img class="logo" src="{% static 'images/gwtc.jpg' %}" alt="GWTC Logo">
                     </a>
-                    <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse"
+                    <button class="btn navbar-toggler primary" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
@@ -41,15 +44,17 @@
         </div>
         <!--=================================== Landing Page Section ===================================-->
         <div class="container col-lg-11 py-5">
-            <div class="text-start my-5 py-4">
-                <h4 class="primary letter-spacing text-xl playfair">We Turn Idea</h4>
+            <div class="text-start my-5 py-5">
+                <h4 class="primary letter-spacing text-xl playfair pt-5">We Turn Idea</h4>
                 <h1 class="text-xl pt-2 stroke-text">Into Reality, That's Awesome!</h1>
             </div>
         </div>
     </div>
+</div>
+<div class="container-fluid px-0 mx-0 main_section">
     <!--=================================== About US Section ===================================-->
     <div class="container col-lg-11 my-5" id="about">
-        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-5 pb-4">About Us</p>
+        <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-5 pt-5 pb-4">About Us</p>
         <div class="row">
             <div class="col-xl-8 col-lg-7 col-md-12 mb-4">
                 <div class="p-2">
@@ -613,7 +618,9 @@
         </div>
     </footer>
     <!--=================================== Ended Section ===================================-->
+    
 </div>
+
 
 <script>
     function myFunction() {

@@ -145,16 +145,24 @@ ul{
     background: var(--bg);
 }
 .header_landing_page_section{
-    background-image:  var(--linear-gradient-img), url('/static/images/it.png');
+    /* background-image:  var(--linear-gradient-img), url('/static/images/it.png');
     background-position: center center;
+    background-repeat: no-repeat; */
     background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
 }
+.header_landing_page_section video{
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -999;
+    opacity: 4;
+}
 .header-section{
-    /* background: var(--nav-bg); */
+    background: var(--nav-bg);
     /* background: var(--transparent); */
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
