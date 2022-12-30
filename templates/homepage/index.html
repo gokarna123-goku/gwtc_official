@@ -15,7 +15,7 @@
                     <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars"></i>
+                        <i class="fa fa-bars primary"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -224,28 +224,28 @@
         <p class="secondary text-uppercase text-center playfair lh-l text-m fw-bold mb-2">Our expertise</p>
         <p class="text-center tertiary mb-5 text-sm">The following tools and technologies are utilized to create any project.</p>
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
+            <div class="col mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/django.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
+            <div class="col mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/mysql.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
+            <div class="col mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/figma.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
+            <div class="col mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/react.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
+            <div class="col mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/canva.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
+            <div class="col mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/node.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
+            <div class="col mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/flutter.png' %}" alt="" class="expertise"></div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-md-3">
+            <div class="col mb-lg-0 mb-md-3">
                 <div class="p-2"><img src="{% static 'images/aws.png' %}" alt="" class="expertise"></div>
             </div>
         </div>
@@ -499,6 +499,9 @@
                             <textarea name="message" id="message" rows="4" class="form-control border"
                                 placeholder="Type your message..." required></textarea>
                         </div>
+                        <div class="mb-4">
+                            <div class="g-recaptcha" data-sitekey="6LdvArojAAAAAEHwdwV0RSy26UvOeTPc906Ii1wq"></div>
+                        </div>
                         <button type="submit" hx-target='#contact' class="btn submit_btn mt-2">Submit</button>
                     </form>
                 </div>
@@ -632,9 +635,11 @@
         }
     }
 </script>
-<script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- <script>
     document.body.addEventListener('htmx:configRequest', (event) => {
         event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}'; //insert csrf token when performing AJAX request 
     })
-</script>
+</script> -->
 {% endblock content %}
