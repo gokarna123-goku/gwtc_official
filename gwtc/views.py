@@ -1,14 +1,27 @@
+import json
+import requests
 from django.shortcuts import redirect, render
 from django.views import generic
 from .forms import ContactForm
+from .models import Portfolio
 from django.contrib import messages
-from .models import Portfolio, PortfolioCategory
+from gwtcproject import settings
+
 
 # Create your views here.
 class Index(generic.CreateView):
     template_name = 'homepage/index.html'
     form_class = ContactForm
     def post(self, request, *args, **kwargs):
+        captch_token = request.POST.get('g-recaptcha-response')
+        captch_url = "https://www.google.com/recaptcha/api/siteverify"
+        captch_secret_key = settings.RECAPTCHA_SECRET_KEY
+        captch_data = {"secret":captch_secret_key, "response":captch_token}
+        captch_server_response = requests.post(url=captch_url, data=captch_data)
+        captch_json = json.loads(captch_server_response.text)
+        if captch_json['success'] == False:
+            messages.error(request, "Invalid Captcha, Try Again!")
+            return redirect('/')
         form = self.form_class(request.POST)
         if form.is_valid():
             contact_obj = form.save(commit=False)
