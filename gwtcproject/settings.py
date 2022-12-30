@@ -132,3 +132,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# RECAPTCHA_SITE_KEY = '6LdvArojAAAAAEHwdwV0RSy26UvOeTPc906Ii1wq'
+RECAPTCHA_SECRET_KEY = '6LdvArojAAAAABBCykbcoSbB1XpO9I0LyFav6rGk'
+

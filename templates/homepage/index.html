@@ -481,25 +481,25 @@
                 </div>
             </div>
             <div class="col-lg-5 mb-3">
-                <div class="p-3 contact">
-                    <form class="mt-2 mb-3" method="POST" action="/">
+                <div class="px-4 pt-3 pb-1 contact">
+                    <form class="mb-3" method="POST" action="/">
                         {% csrf_token %}
-                        <div class="mb-4">
+                        <div class="mb-2">
                             <label for="fullname" class="primary mb-1">Full Name</label>
                             <input type="text" name="fullname" id="fullname" class="form-control border"
                                 placeholder="fullname" required>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-2">
                             <label for="email" class="primary mb-1">Email Address</label>
                             <input type="email" name="email" id="email" class="form-control"
                                 placeholder="email address" required>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-3">
                             <label for="message" class="primary mb-1">Message</label>
-                            <textarea name="message" id="message" rows="4" class="form-control border"
+                            <textarea name="message" id="message" rows="3" class="form-control border"
                                 placeholder="Type your message..." required></textarea>
                         </div>
-                        <div class="mb-4">
+                        <div class="mb-2">
                             <div class="g-recaptcha" data-sitekey="6LdvArojAAAAAEHwdwV0RSy26UvOeTPc906Ii1wq"></div>
                         </div>
                         <button type="submit" hx-target='#contact' class="btn submit_btn mt-2">Submit</button>

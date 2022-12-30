@@ -1,10 +1,12 @@
 import json
+import requests
 from django.shortcuts import redirect, render
 from django.views import generic
-import requests
 from .forms import ContactForm
+from .models import Portfolio
 from django.contrib import messages
-from .models import Portfolio, PortfolioCategory
+from gwtcproject import settings
+
 
 # Create your views here.
 class Index(generic.CreateView):
@@ -13,7 +15,7 @@ class Index(generic.CreateView):
     def post(self, request, *args, **kwargs):
         captch_token = request.POST.get('g-recaptcha-response')
         captch_url = "https://www.google.com/recaptcha/api/siteverify"
-        captch_secret_key = "6LdvArojAAAAABBCykbcoSbB1XpO9I0LyFav6rGk"
+        captch_secret_key = settings.RECAPTCHA_SECRET_KEY
         captch_data = {"secret":captch_secret_key, "response":captch_token}
         captch_server_response = requests.post(url=captch_url, data=captch_data)
         captch_json = json.loads(captch_server_response.text)
